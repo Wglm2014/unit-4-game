@@ -7,21 +7,17 @@ header{
     background-image: linear-gradient(#a7cbd1, #2dcec6);
     border-style:inset;
     border-color:  #75e4f8;
-    border-radius: 50%;
     opacity: 0.85;
 }
 
 .title-header{
     color: rgb(5, 51, 25);
     text-shadow: 2px 2px#153f1c;
-    border-radius:50%;
-
     background-image: linear-gradient(#a7cbd1, #2dcec6);
 }
 
 h5{ 
     font-weight: bolder;
-    border-radius:50%;
     background-image: linear-gradient(#a7cbd1, #2dcec6);
 }
 
@@ -33,19 +29,35 @@ h5{
     opacity: 1.0;
  }
 
- h2
+ 
 
 /*Score Section*/
-.score-played{
-    margin: 0 auto 0 auto;
-    padding: auto;
-    text-align: left;
-}
-#score-title{
+.score-title{
     margin: 0 0 0 0;
-    padding: 0 0 0 0.5;
+    padding: 0 0 0 0;
 }
 .btn-width{
-        width: 90%;
+        width: 80%;
 }
 
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    h5{font-weight:normal;}    
+
+}
+    
+   
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+  @media (min-width: 768px) {  
+    h5{font-weight:normal;}
+}
+   
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) { 
+    
+  }
+   
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+
+  }

@@ -15,29 +15,29 @@
     <div class="container">
         <header>
             <div class="row">
-                <div class="col-lg-4"></div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 col-md-12 col-sm-12"></div>
+                <div class="col-lg-4 col-md-12 col-sm-12">
                     <h1 class="title-header text-center">CRISTAL COLLECTOR</h1>
                 </div>
-                <div class="col-lg-4"></div>
+                <div class="col-lg-4 col-md-12 col-sm-12"></div>
             </div>
             <section class="row description text-left">
                 <div class="col-lg-1"></div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <h5>You will given one random number at the begining of the game</h5>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <h5>There are four crystals below. By clicking on a crystal you will add a specific
                         amount of points to your total score.</h5>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-4 col-sm-4">
                     <h5>You win the game by matching your total scor to random number, you lose the game if
                         your total score goes above the random number</h5>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6 col-sm-6">
                     <h5>The value of each crystal is hidden from you until you click on it</h5>
                 </div>
-                <div class="col-lg-2">
+                <div class="col-lg-2 col-md-6 col-sm-6">
                     <h5>Each time when the game starts, the game will change the values of each crystal</h5>
                 </div>
                 <div class="col-lg-1"></div>
@@ -45,34 +45,41 @@
         </header>
         <!-- Game -->
         <section class="row game">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-md-2 col-sm-12">
                 <div class="row">
-                    <h2 class="col-lg-12">The Number:</h2>
-                </div>
-                <div class="row">
-                    <h2 class="col-lg-12 text-left">#<span class="h2Values" id="number"></span></h2>
+                    <h2 class="col-lg-12 col-md-12 col-sm-6 col-xs-6 text-left">The Number:</h2>
+                    <h2 class="col-lg-12 col-md-12 col-sm-6 col-xs-6 text-left">#<span class="h2Values"
+                            id="number"></span></h2>
                 </div>
             </div>
-            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal1.jpg" id="0">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><img class="btn image-responsive image"
+                    src="./assets/images/xstal1.jpg" id="0">
             </div>
-            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal2.jpg" id="1">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><img class="btn image-responsive image"
+                    src="./assets/images/xstal2.jpg" id="1">
             </div>
-            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal3.jpg" id="2">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><img class="btn image-responsive image"
+                    src="./assets/images/xstal3.jpg" id="2">
             </div>
-            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal4.jpg" id="3">
+            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3"><img class="btn image-responsive image"
+                    src="./assets/images/xstal4.jpg" id="3">
             </div>
-            <div class="col-lg-2">
-                <div class="row">
-                    <h2>Wins:</h2>
+            <div class="col-lg-2 col-md-2 col-sm-12">
+                <div class="row text-left">
+                    <div class="col-lg-12 col-md-12 col-sm-5 col-xs-6">
+                        <h2>Wins:</h2>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-5 col-xs-6">
+                        <h2 class="h2Values" id="won"> 0</h2>
+                    </div>
                 </div>
-                <div class="row">
-                    <h2 class="h2Values" id="won"> 0</h2>
-                </div>
-                <div class="row">
-                    <h2>Losses:</h2>
-                </div>
-                <div class="row">
-                    <h2 class="h2Values" id="lost">0</h2>
+                <div class="row text-left">
+                    <div class="col-lg-12 col-md-12 col-sm-5 col-xs-6">
+                        <h2>Losses:</h2>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-5 col-xs-6">
+                        <h2 class="h2Values" id="lost">0</h2>
+                    </div>
                 </div>
             </div>
 
@@ -80,14 +87,18 @@
         <div class="row">
             <h2></h2>
         </div>
-        <div class="row score-played ">
-            <div class="col-lg-4">
-                <h2 id="score-title">Your total score is:&nbsp;<span class="h2Values" id="score">0</span></h2>
+        <div class="row score-played">
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <h2 class="score-title">Your total score is:</h2>
             </div>
-            <div class="col-lg-4">
-                <button id="play" class="btn btn-lg btn-primary btn-width">Play</button>
+            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                <h2 class="score-title" id="score">0</h2>
             </div>
-            <div id="reset" class="col-lg-4"> <button class="btn btn-lg btn-success btn-width">Reset</button></div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center">
+                <button id="play" class="btn btn-lg btn-md btn-sm btn-primary btn-width">Play</button>
+            </div>
+            <div id="reset" class="col-lg-3 col-md-3 col-sm-12 col-xs-12 text-center"> <button
+                    class="btn btn-lg btn-md btn-sm btn-success btn-width">Reset</button></div>
         </div>
     </div>
 

@@ -9,7 +9,7 @@ $(document).ready(function () {
     });
 
     $(".image").on("click", function (event) {
-        if (theNumber === 0) { play(); console.log(theNumber); }
+        if (theNumber === 0) { play(); }
         var idImage = this.id;
         score += userNumber[idImage];
         $("#score").text(score);
@@ -30,22 +30,12 @@ $(document).ready(function () {
 
     function play() {
         resetVars(false);
-        var counter = 30;
-        var interval = setInterval(function () {
-            var n1 = Math.floor(Math.random() * 102) + 19;
-            $("#number").text(n1);
-            counter--;
-            if (counter === 0) {
-                clearInterval(interval);
-            }
-        }
-            , 30);
-        theNumber = Math.floor(Math.random() * 102) + 19;
+        theNumber = getRandom(19, 120);
         $("#number").text(theNumber);
 
 
         for (i = 0; i < 4; i++) {
-            userNumber[i] = Math.floor(Math.random() * 12) + 1;
+            userNumber[i] = getRandom(1, 12);
         }
     }
     function resetVars(tf) {
@@ -60,5 +50,9 @@ $(document).ready(function () {
             $("#won").text("0");
             $("#lost").text("0");
         }
-    };
+    }
+
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
 });

@@ -7,50 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cristal Game</title>
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <h1 class="title-header">CRISTAL COLLECTOR</h1>
+            <div class="row">
+                <div class="col-lg-4"></div>
+                <div class="col-lg-4">
+                    <h1 class="title-header text-center">CRISTAL COLLECTOR</h1>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+            <section class="row description text-left">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2">
+                    <h5>You will given one random number at the begining of the game</h5>
+                </div>
+                <div class="col-lg-2">
+                    <h5>There are four crystals below. By clicking on a crystal you will add a specific
+                        amount of points to your total score.</h5>
+                </div>
+                <div class="col-lg-2">
+                    <h5>You win the game by matching your total scor to random number, you lose the game if
+                        your total score goes above the random number</h5>
+                </div>
+                <div class="col-lg-2">
+                    <h5>The value of each crystal is hidden from you until you click on it</h5>
+                </div>
+                <div class="col-lg-2">
+                    <h5>Each time when the game starts, the game will change the values of each crystal</h5>
+                </div>
+                <div class="col-lg-1"></div>
+            </section>
         </header>
+        <!-- Game -->
+        <section class="row game">
+            <div class="col-lg-2">
+                <div class="row">
+                    <h2 class="col-lg-12">The Number:</h2>
+                </div>
+                <div class="row">
+                    <h2 class="col-lg-12 text-left">#<span class="h2Values" id="number"></span></h2>
+                </div>
+            </div>
+            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal1.jpg" id="0">
+            </div>
+            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal2.jpg" id="1">
+            </div>
+            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal3.jpg" id="2">
+            </div>
+            <div class="col-lg-2"><img class="btn image-flex image" src="./assets/images/xstal4.jpg" id="3">
+            </div>
+            <div class="col-lg-2">
+                <div class="row">
+                    <h2>Wins:</h2>
+                </div>
+                <div class="row">
+                    <h2 class="h2Values" id="won"> 0</h2>
+                </div>
+                <div class="row">
+                    <h2>Losses:</h2>
+                </div>
+                <div class="row">
+                    <h2 class="h2Values" id="lost">0</h2>
+                </div>
+            </div>
 
-        <section class="description">
-            <p>You will given one random number at the begining of the game</p>
-            <p>There are four crystals below. By clicking on a crystal you will add a specific
-                amount of points to your total score.</p>
-            <p>You win the game by matching your total scor to random number, you lose the game if
-                your total score goes above the random number</p>
-            <p>The value of each crystal is hidden from you until you click on it</p>
-            <p>Each time when the game starts, the game will change the values of each crystal</p>
         </section>
-
-        <section class="game clear-fix">
-            <div class="images">
-                <h2>The Number:</h2>
-                <h2 id="number"></h2>
+        <div class="row">
+            <h2></h2>
+        </div>
+        <div class="row score-played ">
+            <div class="col-lg-4">
+                <h2 id="score-title">Your total score is:&nbsp;<span class="h2Values" id="score">0</span></h2>
             </div>
-            <div class="images"><img class="image" src="./assets/images/xstal1.jpg" alt=""><span id="yul1"></span></div>
-            <div class="images"><img class="image" src="./assets/images/xstal2.jpg" alt=""><span id="yul2"></span></div>
-            <div class="images"><img class="image" src="./assets/images/xstal3.jpg" alt=""><span id="yul3`"></span>
+            <div class="col-lg-4">
+                <button id="play" class="btn btn-lg btn-primary btn-width">Play</button>
             </div>
-            <div class="images"><img class="image" src="./assets/images/xstal4.jpg" alt=""><span id="yul4`"></span>
-            </div>
-            <div class="images">
-                <h2>Wins:</h2>
-                <h2 id="won"></h2>
-                <h2>Losses:</h2>
-                <h2 id="lost"></h2>
-            </div>
-        </section>
-
-        <div class="score-played">
-            <h2 id="score-title">Your total score is:<span id="score"></span></h2>
-            <button id="play">Play</button>
+            <div id="reset" class="col-lg-4"> <button class="btn btn-lg btn-success btn-width">Reset</button></div>
         </div>
     </div>
+
+    <!--Code-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="./assets/javascript/game.js"></script>
 </body>
 
 </html>
